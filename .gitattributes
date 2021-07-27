@@ -5,3 +5,4 @@
 # generated through (flutter build web --release),
 # large javascript files which will mess up linguist..
 backend/web/* --linguist-vendored=false
+QueuePlatform/backend/web/* --linguist-vendored=false

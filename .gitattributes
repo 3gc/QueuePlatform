@@ -1,9 +1,1 @@
-# Auto detect text files and perform LF normalization
-* text=auto
 
-
-*.js linguist-detectable=true
-*.html linguist-detectable=true
-*.py linguist-vendored=true
-*.dart linguist-detectable=true
-*.xml linguist-detectable=false

@@ -1,8 +1,6 @@
-# Auto detect text files and perform LF normalization
-* text=auto
 
 # Contains the web build of the flutter application
 # generated through (flutter build web --release),
 # large javascript files which will mess up linguist..
-backend/web/* --linguist-vendored=true
-QueuePlatform/backend/web/* --linguist-vendored=true
+backend/web/* linguist-vendored
+QueuePlatform/backend/web/* linguist-vendored

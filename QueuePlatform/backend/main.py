@@ -18,6 +18,8 @@ from bot import bot
 # never be created, thus returning 403 on ws://www.api/ws
 from resources import ws
 
+# Put the web build of the flutter 'site' (queue_platform) application
+# inside a folder named 'web', in 'backend'
 templates = Jinja2Templates(directory="web")
 
 

@@ -43,7 +43,7 @@ BOT_KEY_BITS = 256
 BOT_KEY_BYTES = int(256 / 8)  # in this context, this is ok.
 
 BOT_TOKEN: str = os.getenv('BOT_TOKEN')
-BOT_PREFIXES = ['!queue', '!q ']
+BOT_PREFIXES = ['!queue ', '!q ']
 BOT_SHOW_QUEUE_COOLDOWN = 30  # seconds
 
 

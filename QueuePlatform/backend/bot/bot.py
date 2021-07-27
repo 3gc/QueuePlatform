@@ -21,7 +21,8 @@ def get_client(prefixes=BOT_PREFIXES, **kwargs) -> commands.Bot:
     intents = discord.Intents.default()
     intents.members = True
 
-    client = commands.Bot(command_prefix=prefixes, intents=intents, **kwargs)
+    client = commands.Bot(command_prefix=prefixes,
+                          intents=intents, help_command=None, **kwargs)
 
     client.add_cog(QueueCog(client))
 
@@ -50,9 +51,13 @@ class DefinedEmebds:
     )
 
     HELP = discord.Embed(
-        title='Help',
-        descriptions=BOT_HELP_STR
+        title='QueuePlatform | Discord Bot',
+        description=BOT_HELP_STR
     )
+
+
+DefinedEmebds.HELP.add_field(
+    name='Source code', value='[Source](https://www.github.com/3gc/QueuePlatform)', inline=False)
 
 
 class QueueCog(commands.Cog):
@@ -238,6 +243,10 @@ class QueueCog(commands.Cog):
                 description=gc.key
             )
         )
+
+    @commands.command(name='help')
+    async def queue_help(self, ctx):
+        await ctx.send(embed=DefinedEmebds.HELP)
 
     @ add.error
     async def queue_add_error(self, ctx, error):

@@ -78,12 +78,8 @@ def get_from_queues_l(id: int, name: str) -> Queue:
 
 BOT_HELP_STR = \
     """
-QueuePlatform | Discord Bot
-
 ```
-prefix: `!queue`
-
-(* = optional parameters)
+prefix: !queue or !q
 ```
 
 **Queue commands**
@@ -92,7 +88,10 @@ Add yourself to the queue
 - `add (value)`
 
 List the queue
-- `show (user*)`
+- `show`
+
+Show user's position in queue
+- `show (user)`
 
 Remove yourself from the queue
 - `leave`
@@ -102,4 +101,6 @@ Remove yourself from the queue
 Remove user from queue
 - `remove (user)`
 
+Clear the whole queue
+- `clear`
 """
